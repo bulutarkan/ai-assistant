@@ -178,12 +178,12 @@ export function createGoogleAuthService(): GoogleAuthService {
   console.log('Available env vars:', {
     VITE_CLIENT_ID: !!import.meta.env.VITE_SEARCH_CONSOLE_CLIENT_ID,
     VITE_CLIENT_SECRET: !!import.meta.env.VITE_SEARCH_CONSOLE_CLIENT_SECRET,
-    VITE_REDIRECT_URI: !!import.meta.env.VITE_SEARCH_CONSOLE_REDIRECT_URI,
+    VITE_REDIRECT_URL: !!import.meta.env.VITE_SEARCH_CONSOLE_REDIRECT_URL,
   });
 
   const clientId = import.meta.env.VITE_SEARCH_CONSOLE_CLIENT_ID;
   const clientSecret = import.meta.env.VITE_SEARCH_CONSOLE_CLIENT_SECRET;
-  const redirectUri = import.meta.env.VITE_SEARCH_CONSOLE_REDIRECT_URI;
+  const redirectUri = import.meta.env.VITE_SEARCH_CONSOLE_REDIRECT_URL;
 
   console.log('Credential values:', {
     hasClientId: !!clientId,
@@ -199,7 +199,7 @@ export function createGoogleAuthService(): GoogleAuthService {
     throw new Error('VITE_SEARCH_CONSOLE_CLIENT_SECRET is missing. Check your .env file and restart the dev server.');
   }
   if (!redirectUri) {
-    throw new Error('VITE_SEARCH_CONSOLE_REDIRECT_URI is missing. Check your .env file and restart the dev server.');
+    throw new Error('VITE_SEARCH_CONSOLE_REDIRECT_URL is missing. Check your .env file and restart the dev server.');
   }
 
   console.log('✅ Google OAuth credentials loaded successfully');
