@@ -1,0 +1,7 @@
+{
+  "name": "CK AI Assistant",
+  "description": "A modern, stylish AI chatbot assistant with a medical theme, designed to provide intelligent conversation, handle various inputs like voice and images, and manage user-specific chat history.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
